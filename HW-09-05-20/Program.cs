@@ -8,9 +8,7 @@ namespace HW_09_05_20
         static void Main(string[] args)
         {
             //Задача №1
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\t\tЗадача №1");
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;Console.WriteLine("\t\tЗадача №1");Console.ResetColor();
             var Number = new Random().Next(10, 100000000).ToString();
             int[] ArrDigits = new int[Number.Length];
             Console.WriteLine(Number);
@@ -21,10 +19,9 @@ namespace HW_09_05_20
             foreach (int Digits in ArrDigits.Reverse())
                 Console.Write($"{Digits}, ");
             Console.ReadKey();
+
             //Задача №2
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n\t\tЗадача №2");
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;Console.WriteLine("\n\t\tЗадача №2");Console.ResetColor();
             int[] InputArr= new int[] { 1, 2, 3, 4, 5, -1, -2, -3, -14, -5 };
             int[] OutputArr = new int[2];
             OutputArr[0] = InputArr.Where(Num=>Num>0).Count();
@@ -34,6 +31,16 @@ namespace HW_09_05_20
             foreach (int Num in InputArr)Console.Write($"{Num}, ");
             Console.Write("\nOutputArrey = ");
             foreach (int Num in OutputArr) Console.Write($"{Num}, ");
+            Console.ReadKey();
+
+            //Задача №3
+            Console.ForegroundColor = ConsoleColor.Green;Console.WriteLine("\n\t\tЗадача №3");Console.ResetColor();
+            string[] NameClubArr = new string[] { "Истиклол", "Худжанд", "Регар-Тадаз", "Равшан", "Хайр", "Сарой-Камар" };
+            Console.Write("Arrey(до сортировка):  ");
+            foreach (string NameClub in NameClubArr) Console.Write($"{NameClub}, ");
+            NameClubArr = NameClubArr.OrderBy(Name=>Name.Length).ToArray();
+            Console.Write("\nArrey(после сортировка):  ");
+            foreach (string NameClub in NameClubArr) Console.Write($"{NameClub}, ");
             Console.ReadKey();
         }
     }
