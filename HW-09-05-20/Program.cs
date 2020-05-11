@@ -6,7 +6,7 @@ namespace HW_09_05_20
     class Program
     {
         static void Main(string[] args)
-        {/*
+        {
             //Задача №1
             Console.ForegroundColor = ConsoleColor.Green;Console.WriteLine("\t\tЗадача №1");Console.ResetColor();
             var Number = new Random().Next(10, 100000000).ToString();
@@ -31,7 +31,7 @@ namespace HW_09_05_20
             foreach (int Num in InputArr)Console.Write($"{Num}, ");
             Console.Write("\nOutputArrey = ");
             foreach (int Num in OutputArr) Console.Write($"{Num}, ");
-            Console.ReadKey();*/
+            Console.ReadKey();
 
             //Задача №3
             Console.ForegroundColor = ConsoleColor.Green;Console.WriteLine("\n\t\tЗадача №3");Console.ResetColor();
@@ -49,7 +49,7 @@ namespace HW_09_05_20
             Console.Write(" Массив: ");
             foreach (int Num in NumberArrey) Console.Write($"{Num}, ");
             int Max = NumberArrey.Max(); int Min = NumberArrey.Min();
-            int UnikalElement= NumberArrey.Single(Number=>NumberArrey.Count(N=>N==Max)==1 && Number==Max || NumberArrey.Count(N => N == Min) == 1 && Number == Min);
+            int UnikalElement= NumberArrey.Single(Numb=>NumberArrey.Count(N=>N==Max)==1 && Numb==Max || NumberArrey.Count(N => N == Min) == 1 && Numb == Min);
             Console.Write($"\n Уникалный елемент массив: {UnikalElement}");
             Console.ReadKey();
         }
