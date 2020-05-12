@@ -9,14 +9,8 @@ namespace HW_09_05_20
         {
             //Задача №1
             Console.ForegroundColor = ConsoleColor.Green;Console.WriteLine("\t\tЗадача №1");Console.ResetColor();
-            var Number = new Random().Next(10, 100000000).ToString();
-            int[] ArrDigits = new int[Number.Length];
-            Console.WriteLine(Number);
-            for (int i = 0; i < Number.Length; i++)
-            {
-                ArrDigits[i] = int.Parse((Number.Skip(i).Take(1)).First().ToString());
-            }
-            foreach (int Digits in ArrDigits.Reverse())
+            var Number = 987654321.ToString().ToCharArray();
+            foreach (var Digits in Number.Reverse())
                 Console.Write($"{Digits}, ");
             Console.ReadKey();
 
